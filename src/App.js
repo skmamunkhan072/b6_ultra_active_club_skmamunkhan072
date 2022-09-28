@@ -1,9 +1,8 @@
-import logo from "./logo.svg";
-import "./App.css";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    // https://github.com/Programming-Hero-Web-Course4/b6-ultra-active-club-skmamunkhan072
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
