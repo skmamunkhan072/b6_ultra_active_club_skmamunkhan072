@@ -1,0 +1,18 @@
+.brack_secked_container {
+  background: #323b4b;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px 1px #000000ad;
+}
+.brack_secked_container .item {
+  background: #171819;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0px 0px 7px 1px #ffffff47;
+}
+.brack_secked_container .item:hover {
+  box-shadow: 0px 0px 7px 1px #eba6cc6c;
+  background: #38434e;
+}

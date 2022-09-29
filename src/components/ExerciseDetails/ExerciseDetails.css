@@ -1,0 +1,10 @@
+.exercise_time_wraper {
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #78808c;
+}
+.exercise_time_wraper .seconds {
+  color: #5d6268;
+}

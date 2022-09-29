@@ -2,10 +2,10 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  /* margin: 20px auto 10px auto; */
   margin-top: 20px;
   margin-right: 10px;
   border: 5px solid #aa0177;
+  box-shadow: 0px 0px 9px 1px #089e08ba;
 }
 .profile_img_wraper img {
   width: 100%;
@@ -20,6 +20,7 @@
   background: #323b4b;
   padding: 10px 20px;
   border-radius: 10px;
+  box-shadow: 0px 0px 7px 1px #000000ad;
 }
 .my_details p {
   color: #d4dbe8;

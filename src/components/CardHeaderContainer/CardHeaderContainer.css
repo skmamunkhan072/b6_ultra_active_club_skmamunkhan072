@@ -5,9 +5,9 @@
   border: 4px solid #3cdd0b;
   border-radius: 50%;
   padding: 11px;
+  box-shadow: 3px 0px 15px 1px #000000ad;
 }
-.card_logo {
-}
+
 .card_header_text {
   color: #358ad1;
 }
