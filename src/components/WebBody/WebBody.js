@@ -10,10 +10,9 @@ const WebBody = () => {
       .then((res) => res.json())
       .then((datas) => setDatas(datas));
   }, []);
-  console.log(datas);
   return (
     <div className="web_body grid">
-      <CardWraperContainer></CardWraperContainer>
+      <CardWraperContainer datas={datas}></CardWraperContainer>
       <RightSiteBarContainer></RightSiteBarContainer>
     </div>
   );
