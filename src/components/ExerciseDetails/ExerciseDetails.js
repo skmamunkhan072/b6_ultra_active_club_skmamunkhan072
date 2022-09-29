@@ -1,6 +1,8 @@
 import React from "react";
 import "./ExerciseDetails.css";
 const ExerciseDetails = () => {
+  const newSeconds = localStorage.getItem("addBrackSecond");
+  console.log(newSeconds);
   return (
     <div>
       <h1 className="my-6 text-xl">Exercise Details</h1>

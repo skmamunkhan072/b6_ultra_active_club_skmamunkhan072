@@ -1,11 +1,8 @@
 import React from "react";
 import "./Card.css";
 const Card = ({ data }) => {
-  console.log(data);
   const { id, name, details, img, time, quantity, email, forAge } = data;
-  console.log(img);
   const newDetails = details.slice(0, 100);
-  console.log(newDetails);
   return (
     <div>
       <div className="card card-compact bg-base-100 shadow-xl">
