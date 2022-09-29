@@ -1,0 +1,10 @@
+@media screen and (max-width: 768px) {
+  .right_sit_Container {
+    grid-template-columns: 2.5fr 2fr;
+  }
+}
+@media screen and (max-width: 640px) {
+  .right_sit_Container {
+    display: none;
+  }
+}
