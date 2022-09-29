@@ -3,7 +3,7 @@ import "./AddaBrack.css";
 
 const AddaBrack = () => {
   return (
-    <div>
+    <div className="">
       <h1>Add a brack </h1>
     </div>
   );
