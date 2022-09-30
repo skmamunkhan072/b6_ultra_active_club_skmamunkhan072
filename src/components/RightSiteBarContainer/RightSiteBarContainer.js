@@ -37,6 +37,7 @@ if(localValueConNumber){
       <Profile></Profile>
       <AddaBrack addToSeconds={addToSeconds}></AddaBrack>
       <ExerciseDetails requiredTime={requiredTime} exercisSeconds={exercisSeconds}></ExerciseDetails>
+
     </div>
   );
 };

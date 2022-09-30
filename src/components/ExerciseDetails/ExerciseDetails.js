@@ -16,6 +16,10 @@ const ExerciseDetails = ({exercisSeconds , requiredTime}) => {
           <p className="seconds"><span id="requiredTime">{requiredTime}</span> seconds</p>
         </div>
       </div>
+
+      <div className="mt-10 text-center">
+        <button className="bg-teal-600 hover:bg-teal-400 text-black  py-2 px-5 rounded-md font-semibold">Activity Completed</button>
+      </div>
     </div>
   );
 };
