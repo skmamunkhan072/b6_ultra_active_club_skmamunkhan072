@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../Card/Card";
 import CardHeaderContainer from "../CardHeaderContainer/CardHeaderContainer";
+import QuestionCard from "../QuestionCard/QuestionCard";
 import "./CardWraperContainer.css";
 
 const CardWraperContainer = ({ datas,cardButn }) => {
@@ -13,6 +14,10 @@ const CardWraperContainer = ({ datas,cardButn }) => {
           <Card cardButn={cardButn} key={data.id} data={data}></Card>
         ))}
       </div>
+      <div className="question_card">
+
+      </div>
+      <QuestionCard></QuestionCard>
     </div>
   );
 };

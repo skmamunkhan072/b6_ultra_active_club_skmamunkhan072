@@ -18,7 +18,6 @@ const WebBody = () => {
   const {time} = card
 
   if(requiredTimeString.innerText === "0"){
-    console.log("soman na");
     setRequiredTime(time)
   }
   if(requiredTimeString.innerText){

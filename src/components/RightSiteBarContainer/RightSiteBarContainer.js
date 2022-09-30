@@ -6,28 +6,27 @@ import Profile from "../Profile/Profile";
 import "./RightSiteBarContainer.css";
 
 const RightSiteBarContainer = ({requiredTime}) => {
-  let localStItems = 0;
+  let localStItems = "0";
   const exerciseText = document.getElementById('Exercise_seconds');
   const [exercisSeconds, setExerciseText] = useState(0)
   const addToSeconds = e =>{
     const targetValue = e?.target.innerText
-    const exerciseConNumber = parseFloat(exerciseText.innerText)
     if(targetValue !== 's'){
-      const secondsConNumber = parseFloat(targetValue)
-      const total = exerciseConNumber + secondsConNumber
-      exerciseText.innerText = total
-    const getLocalValue = SetLocalStorage(total,exerciseText)
+
+      // const total = exerciseConNumber + secondsConNumber
+      exerciseText.innerText = targetValue
+    const getLocalValue = SetLocalStorage(targetValue)
 
   }
 }
 useEffect(()=>{
 const localStValue = localStorage.getItem("Exercise_Seconds")
-const localValueConNumber = parseFloat(localStValue)
+const localValueConNumber = JSON.parse(localStValue)
 if(localValueConNumber){
-  setExerciseText(localStValue)
+  setExerciseText(localValueConNumber)
 }else{
-  localStorage.setItem("Exercise_Seconds",localStItems )
-  setExerciseText(localStValue)
+  localStorage.setItem("Exercise_Seconds",JSON.stringify(localStItems) )
+  setExerciseText(localValueConNumber)
 }
 },[])
 
