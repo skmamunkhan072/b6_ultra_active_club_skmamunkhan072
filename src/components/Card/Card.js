@@ -7,7 +7,7 @@ const Card = ({ data }) => {
     <div>
       <div className="card card-compact bg-base-100 shadow-xl">
         <figure className="card_img">
-          <img src={img} alt="Shoes" className="h-[220px]" />
+          <img src={img ? img : "No Data"} alt="Shoes" className="h-[220px]" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
