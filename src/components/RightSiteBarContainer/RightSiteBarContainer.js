@@ -5,31 +5,29 @@ import ExerciseDetails from "../ExerciseDetails/ExerciseDetails";
 import Profile from "../Profile/Profile";
 import "./RightSiteBarContainer.css";
 
-const RightSiteBarContainer = () => {
+const RightSiteBarContainer = ({requiredTime}) => {
   let localStItems = 0;
-  const brackText = document.getElementById('brack_seconds');
-  const [bracksecond, setBrackText] = useState(0)
-
+  const exerciseText = document.getElementById('Exercise_seconds');
+  const [exercisSeconds, setExerciseText] = useState(0)
   const addToSeconds = e =>{
     const targetValue = e?.target.innerText
-    const brackConNumber = parseFloat(brackText.innerText)
+    const exerciseConNumber = parseFloat(exerciseText.innerText)
     if(targetValue !== 's'){
       const secondsConNumber = parseFloat(targetValue)
-      const total = brackConNumber + secondsConNumber
-      brackText.innerText = total
-    const getLocalValue = SetLocalStorage(total, brackText)
+      const total = exerciseConNumber + secondsConNumber
+      exerciseText.innerText = total
+    const getLocalValue = SetLocalStorage(total,exerciseText)
 
   }
 }
 useEffect(()=>{
-const localStValue = localStorage.getItem("Brack_Seconds")
+const localStValue = localStorage.getItem("Exercise_Seconds")
 const localValueConNumber = parseFloat(localStValue)
 if(localValueConNumber){
-  setBrackText(localStValue)
+  setExerciseText(localStValue)
 }else{
-  localStorage.setItem("Brack_Seconds",localStItems )
-  console.log( localValueConNumber);
-  setBrackText(localStValue)
+  localStorage.setItem("Exercise_Seconds",localStItems )
+  setExerciseText(localStValue)
 }
 },[])
 
@@ -38,7 +36,7 @@ if(localValueConNumber){
     <div className="right_sit_Container  px-5">
       <Profile></Profile>
       <AddaBrack addToSeconds={addToSeconds}></AddaBrack>
-      <ExerciseDetails bracksecond={bracksecond}></ExerciseDetails>
+      <ExerciseDetails requiredTime={requiredTime} exercisSeconds={exercisSeconds}></ExerciseDetails>
     </div>
   );
 };
