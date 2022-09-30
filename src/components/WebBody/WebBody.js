@@ -31,7 +31,6 @@ const WebBody = () => {
   const mobileMamue = () => {
     hambar.classList.toggle("hidden");
     hambar.classList.remove("profile_vigabol-hide");
-    console.log("helo", hambar.getAttribute("class"));
   };
 
   return (
