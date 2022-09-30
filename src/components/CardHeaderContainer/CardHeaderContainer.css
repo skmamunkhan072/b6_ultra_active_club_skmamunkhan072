@@ -11,3 +11,19 @@
 .card_header_text {
   color: #358ad1;
 }
+.hamber_icon {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  .hamber_icon {
+    display: block;
+  }
+}
+@media screen and (max-width: 465px) {
+  #card_logo_wrapers {
+    width: 100%;
+  }
+  .card_header_text {
+    margin-top: 10px;
+  }
+}

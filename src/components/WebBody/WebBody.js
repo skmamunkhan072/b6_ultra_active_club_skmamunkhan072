@@ -4,33 +4,48 @@ import RightSiteBarContainer from "../RightSiteBarContainer/RightSiteBarContaine
 import "./WebBody.css";
 
 const WebBody = () => {
-  const requiredTimeString = document.getElementById("requiredTime")
+  const requiredTimeString = document.getElementById("requiredTime");
   const [datas, setDatas] = useState([]);
-  const [requiredTime, setRequiredTime] = useState(0)
+  const [requiredTime, setRequiredTime] = useState(0);
   useEffect(() => {
     fetch(`Fackdb.json`)
       .then((res) => res.json())
       .then((datas) => setDatas(datas));
   }, []);
 
-  const cardButn = (id, difolt) =>{
-  const card =   datas.find((data) => data.id === id)
-  const {time} = card
+  const cardButn = (id, difolt) => {
+    const card = datas.find((data) => data.id === id);
+    const { time } = card;
 
-  if(requiredTimeString.innerText === "0"){
-    setRequiredTime(time)
-  }
-  if(requiredTimeString.innerText){
-    const requiredTimeContNum = parseFloat(requiredTimeString.innerText)
-    const totalrequiredTime =  requiredTimeContNum + time
-    setRequiredTime(totalrequiredTime);
-  }
-  }
+    if (requiredTimeString.innerText === "0") {
+      setRequiredTime(time);
+    }
+    if (requiredTimeString.innerText) {
+      const requiredTimeContNum = parseFloat(requiredTimeString.innerText);
+      const totalrequiredTime = requiredTimeContNum + time;
+      setRequiredTime(totalrequiredTime);
+    }
+  };
+
+  const hambar = document.getElementById("profileAriya");
+  const mobileMamue = () => {
+    hambar.classList.toggle("hidden");
+    hambar.classList.remove("profile_vigabol-hide");
+    console.log("helo", hambar.getAttribute("class"));
+  };
 
   return (
     <div className="web_body grid">
-      <CardWraperContainer cardButn={cardButn} datas={datas}></CardWraperContainer>
-      <RightSiteBarContainer requiredTime={requiredTime}></RightSiteBarContainer>
+      <CardWraperContainer
+        cardButn={cardButn}
+        datas={datas}
+        mobileMamue={mobileMamue}
+      ></CardWraperContainer>
+      <div id="profileAriya" className=" profile_vigabol-hide">
+        <RightSiteBarContainer
+          requiredTime={requiredTime}
+        ></RightSiteBarContainer>
+      </div>
     </div>
   );
 };

@@ -19,4 +19,8 @@
   .web_body {
     grid-template-columns: auto;
   }
+
+  .profile_vigabol-hide {
+    display: none;
+  }
 }
